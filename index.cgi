@@ -215,10 +215,11 @@ echo "
  </span>
  <a href='#news' class='menu' style='float:left; margin-top:25px; margin-left:18px;'>
   NEWS
- </a>
- <span class='menu' style='float:left; margin-top:25px; margin-left:18px;'>
+ </a>";
+/* <span class='menu' style='float:left; margin-top:25px; margin-left:18px;'>
   ABOUT
- </span>
+ </span>*/
+echo "
  <span class='menu' style='float:right; margin-right:30px; margin-top:20px;'>
   <a href=' https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=sales@thebeachstreet.com&display=1' class='fas fa-shopping-bag fa-2x' style='color:white;'>
   </a>
