@@ -1,0 +1,55 @@
+#!/usr/pkg/bin/php
+
+<?php
+echo "<link rel='stylesheet' type='text/css' href='beach.css'>";
+echo "<html>";
+
+system("env");
+var_dump($_GET);
+parse_str($_SERVER['QUERY_STRING'], $_GET);
+#system("id");
+echo "<br>";
+$processUser = posix_getpwuid(posix_geteuid());
+print $processUser['name'];
+echo "<br>";
+echo 'Current user: ' . get_current_user();
+echo '<p>Current group: ' . getmygid();
+echo '<p>';
+
+try {
+ $db = new PDO('sqlite:/home/t/thebeachstreet.com/database/bs.db');
+ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+ echo 'Connection failed: ' . $e->getMessage();
+ echo $e->getTraceAsString();
+}
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+print_r($db->errorInfo()); 
+
+$em = $_GET["sub"];
+echo "email is $em";
+echo '<p>';
+try {
+ $db->exec("INSERT INTO elist (email) VALUES ('$em')");
+ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+ echo 'Connection failed: ' . $e->getMessage();
+}
+
+echo "<br>";
+print_r($db->errorInfo());
+echo '<br>';
+try {
+ $statement = $db->query("SELECT * FROM elist");
+ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+ echo 'Connection failed: ' . $e->getMessage();
+}
+
+while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+ echo "<p>";
+ echo $row['email'];
+}
+
+?>

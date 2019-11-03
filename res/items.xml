@@ -1,0 +1,60 @@
+<item>
+\t<name>welp</name>
+\t<id>1</id>
+\t<size>lms</size>
+\t<img>welp.png</img>
+\t<stock>50</stock>
+\t<price>39.95</price>
+\t<weight></weight>
+\t<who>all</who>
+\t<type>hoodie</type>
+\t<style>summer</style>
+\t<note>not much hoe</note>
+\t<time>Tue08Oct201908:57:12PMMDT</time>
+</item>
+<item>
+\t<name>rebel</name>
+\t<id>2</id>
+\t<size>lm</size>
+\t<img>rbl.png</img>
+\t<stock>25</stock>
+\t<price>12.5</price>
+\t<weight>2</weight>
+\t<who>m</who>
+\t<type>2</type>
+\t<style>summer</style>
+\t<note>no</note>
+\t<time>Tue08Oct201908:57:58PMMDT</time>
+</item>
+<item>
+/t<name>wor</name>
+/t<id>3</id>
+/t<size>m</size>
+/t<img>w.png</img>
+/t<stock>10</stock>
+/t<price>12</price>
+/t<weight>2</weight>
+/t<who>w</who>
+/t<type>3</type>
+/t<style>summer</style>
+/t<note></note>
+/t<time>Tue08Oct201908:59:25PMMDT</time>
+</item>
+
+/tdog
+	dog
+<item>
+	<name>he</name>
+	<id>2</id>
+	<size>2</size>
+	<img>2</img>
+	<stock>2</stock>
+	<price>2</price>
+	<weight>2</weight>
+	<who>2</who>
+	<type>2</type>
+	<style>2</style>
+	<note>2</note>
+	<time>Tue08Oct201909:01:09PMMDT</time>
+</item>
+
